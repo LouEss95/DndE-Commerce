@@ -59,10 +59,27 @@ body{
 #navbar li{
     list-style: none;
     padding: 0 20px;
+    position: relative;
+    transition: .5s ease;
 }
 #navbar li a{
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
     color: #1c140d;
+    transition: 0.2s ease ;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: sienna;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 1.5px;
+    background: sienna;
+    position: absolute;
+    bottom: -8px;
+    left: 35%;
 }
